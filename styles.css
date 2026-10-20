@@ -1,0 +1,276 @@
+/* RESET & FONT */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f3f4f6; /* Abu-abu sangat muda */
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* HEADER & NAVBAR (Gaya Menyatu Biru Gelap) */
+.header-wrapper {
+    background-color: #1e3a8a; /* Biru Navy / Dongker */
+    color: white;
+    padding: 20px 30px 0 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.header-brand {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.header-brand h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.header-brand p {
+    font-size: 14px;
+    color: #93c5fd;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: #bfdbfe;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 15px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: white;
+    font-weight: bold;
+    border-bottom: 3px solid white; /* Garis bawah putih untuk menu aktif */
+}
+
+/* CARD CONTAINER */
+.card {
+    background-color: white;
+    max-width: 850px;
+    margin: 0 auto 40px auto;
+    padding: 40px;
+    border-radius: 12px; /* Lebih membulat */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* PROFILE HEADER (Kiri Foto, Kanan Info) */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #e5e7eb;
+    border: 2px solid #e5e7eb;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #111827;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* BADGES / PILLS (Label Warna-warni) */
+.badge-status {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.skill-list li {
+    background-color: #e0e7ff;
+    color: #3730a3;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* TYPOGRAPHY CARD */
+h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #1f2937;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 8px;
+}
+
+/* TABLE PENDIDIKAN */
+.table-edu {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden; /* Biar sudut tabel ikut membulat */
+}
+
+.table-edu th, .table-edu td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.table-edu th {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.table-edu td {
+    font-size: 14px;
+    color: #1f2937;
+}
+
+/* FORM STYLING (Modern & Membulat) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.form-group label.inline-label {
+    display: inline;
+    font-weight: normal;
+    color: #4b5563;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 25px; /* Form membulat persis seperti di PDF */
+    font-family: inherit;
+    font-size: 14px;
+    color: #1f2937;
+    background-color: #f9fafb;
+    transition: all 0.3s;
+}
+
+textarea {
+    border-radius: 12px; /* Khusus textarea jgn terlalu membulat */
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 5px 0;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px; /* Tombol membulat */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.1s;
+    text-align: center;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    width: 100%; /* Tombol lebar penuh di form */
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    background-color: #f3f4f6;
+    color: #374151;
+    width: 100%;
+}
+
+.btn-secondary:hover {
+    background-color: #e5e7eb;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* FOOTER */
+.main-footer {
+    text-align: center;
+    color: #6b7280;
+    font-size: 13px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE SMARTPHONE */
+@media (max-width: 600px) {
+    .header-wrapper { padding: 20px; }
+    .card { margin: 15px; padding: 25px; }
+    .profile-header { flex-direction: column; text-align: center; }
+    .action-buttons { flex-direction: column; }
+    .radio-group, .checkbox-group { flex-direction: column; align-items: flex-start; gap: 10px; }
+}
